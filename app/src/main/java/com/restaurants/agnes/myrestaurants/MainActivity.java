@@ -10,18 +10,21 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MainActivity extends Activity {
-    private Button mFindRestaurantsButton;
-    private EditText mLocationEditText;
-    private TextView mAppNameTextView;
+    @BindView(R.id.findRestaurantsButton) Button mFindRestaurantsButton;
+    @BindView(R.id.locationEditText) EditText mLocationEditText;
+    @BindView(R.id.textView) TextView mAppNameTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mLocationEditText = (EditText) findViewById(R.id.locationEditText);
-        mFindRestaurantsButton = (Button) findViewById(R.id.findRestaurantsButton);
-        mAppNameTextView = (TextView) findViewById(R.id.textView);
+        ButterKnife.bind(this);
+
         Typeface ostrichFont = Typeface.createFromAsset(getAssets(), "fonts/ostrichsansarif.ttf");
         mAppNameTextView.setTypeface(ostrichFont);
 
