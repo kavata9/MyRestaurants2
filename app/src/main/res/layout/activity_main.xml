@@ -8,7 +8,7 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp"
     tools:background="#000000"
-    tools:context="com.restaurants.agnes.myrestaurants.MainActivity">
+    tools:context="com.restaurants.agnes.myrestaurants.ui.MainActivity">
 
     <ImageView
         android:id="@+id/imageView"

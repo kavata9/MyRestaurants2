@@ -1,15 +1,16 @@
-package com.restaurants.agnes.myrestaurants;
+package com.restaurants.agnes.myrestaurants.ui;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+
+import com.restaurants.agnes.myrestaurants.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -32,7 +33,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 String location = mLocationEditText.getText().toString();
-                Intent intent = new Intent(MainActivity.this, RestaurantsActivity.class);
+                Intent intent = new Intent(MainActivity.this, RestaurantsListActivity.class);
                 intent.putExtra("location", location);
                 startActivity(intent);
             }

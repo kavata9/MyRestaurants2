@@ -1,24 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.restaurants.agnes.myrestaurants.MainActivity">
+    tools:context="com.restaurants.agnes.myrestaurants.ui.RestaurantsListActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Restaurants near "
-        android:id="@+id/locationTextView"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
-
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/listView"
-        android:layout_below="@+id/locationTextView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-</RelativeLayout>
+        android:paddingBottom="24dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp" />
+</android.support.constraint.ConstraintLayout>
